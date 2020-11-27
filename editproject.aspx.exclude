@@ -1,0 +1,87 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DashMaster.master" AutoEventWireup="true" CodeFile="editproject.aspx.cs" Inherits="editproject" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+                Project
+                <asp:DropDownList ID="DDL1" runat="server" 
+                    DataSourceID="SelectProject" DataTextField="project_name" 
+                    DataValueField="project_id" AutoPostBack="True" onselectedindexchanged="DDL1_SelectedIndexChanged"
+                   >
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SelectProject" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" 
+                    SelectCommand="SELECT [project_name], [project_id] FROM [Project_Master]">
+                </asp:SqlDataSource>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Project ID&nbsp;
+            </td>
+            <td>
+                <asp:TextBox ID="txtProjectID" runat="server"></asp:TextBox>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                Project Description</td>
+            <td>
+                <asp:TextBox ID="txtProjectDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                Start Date</td>
+            <td>
+                <asp:TextBox ID="txtStartDate" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                End Date</td>
+            <td>
+                <asp:TextBox ID="txtEndDate" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                    Text="Update Project" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

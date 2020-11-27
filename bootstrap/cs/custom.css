@@ -1,0 +1,41 @@
+﻿.txt-control-height {
+    height: 25px !important;
+}
+
+.imgstyle {
+    width: 22px;
+    height: 22px;
+}
+
+.headersize {
+    font-size: 10pt;
+    height: 35px;
+    background-color: #cac4c4;
+}
+.selectstyle{
+        padding: 3px 0px !important;
+}
+
+.login-logo, .register-logo {
+    background: #367fa9;
+}
+
+.login-box, .register-box {
+    box-shadow: 0 2px 5px #777;
+    -moz-box-shadow: 0 2px 5px #777;
+    -webkit-box-shadow: 0 2px 5px #777;
+}
+
+/*.select2-container--default .select2-selection--single {   
+    border-radius: 0px !important;
+}*/
+
+.select2-container .select2-selection--single {
+     height: 34px !important;
+
+}
+
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+    padding: 5px 0px !important;
+
+}

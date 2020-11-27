@@ -1,0 +1,63 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.IO;
+
+public partial class ManageIssues : System.Web.UI.Page
+{
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+
+    }
+    
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        DBActivity db = new DBActivity();
+        int userid = Convert.ToInt32(Session["userid"].ToString());
+        string projectid = Session["selectedproject"].ToString();
+        if (fuProject.HasFile)
+        {
+            try
+            {
+
+                string filename = Path.GetFileName(fuProject.FileName).Trim();
+                string guid = Guid.NewGuid().ToString();
+                string FN = guid.Replace("-", "");
+                string abc = FN + filename;
+                fuProject.SaveAs(Server.MapPath("~/uploadedFiles/") + abc);
+                string filePath = "~/uploadedFiles/" + abc;
+                long regi = db.IssueSubmit(projectid, txtissuename.Text, txtissuedesc.Text, txtissuetype.Text, ddlPriority.SelectedValue, ddlReproducibility.SelectedValue, txtSteps.Text, txtNotes.Text, userid);
+
+                string fileID = db.fileUploading(abc, filename, filePath,Convert.ToInt64(ddlProject.SelectedValue), (string)Convert.ToString(regi));
+
+            }
+            catch (Exception ex) { throw ex; }
+
+
+        }
+        else
+        {
+
+            long regi = db.IssueSubmit(projectid, txtissuename.Text, txtissuedesc.Text, txtissuetype.Text, ddlPriority.SelectedValue, ddlReproducibility.SelectedValue, txtSteps.Text, txtNotes.Text, userid);
+
+        }
+        Response.Redirect("viewIssueAdminSide.aspx");
+
+
+
+    }
+
+
+}

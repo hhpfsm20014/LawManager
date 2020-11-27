@@ -1,0 +1,188 @@
+
+.login-box 
+{
+    
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/login-box-backg.png) no-repeat left top;
+    margin-left: 0px;
+}
+
+.features-box 
+{
+    
+	width:240px;
+	height: 252px;
+	padding: 58px 76px 58px 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/feature_bg1.png) no-repeat left top;
+    margin-left: 0px;
+}
+
+.contact-box 
+{
+    
+	width:240px;
+	padding: 30px 76px 60px 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/tablebground.png) no-repeat left top;
+    margin-left: 0px;
+}
+
+.editmodule-box 
+{
+    
+	width:240px;
+	padding: 30px 76px 50px 120px;
+	color: #000000;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/bgroundeditmodule.png) no-repeat left top;
+    margin-left: 106px;
+}
+
+.preferences-box 
+{
+    
+	width:240px;
+	padding: 30px 76px 50px 70px;
+	color: #000000;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/bgroundeditmodule.png) no-repeat left top;
+    margin-left: 106px;
+}
+
+.myaccount-box 
+{
+    
+	width:240px;
+	padding: 30px 76px 50px 120px;
+	color: #000000;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/bgmyaccount.png) no-repeat left top;
+    margin-left: 106px;
+}
+.table-bg
+{
+    
+	width:240px;
+	height: 252px;
+	padding: 58px 106px 58px 76px;
+	color: #ffffff;
+	background: url(images/tablebground.png) no-repeat left top;
+}
+
+.features-label 
+{
+    width:500px;
+	height: 35px;
+	padding-top: 10px;
+	padding-left: 7px;
+    background: url(images/h2label.png) no-repeat left top;
+    color: White;
+ }
+ 
+ .features-label-div 
+{
+	padding-top: 80px;
+ }
+
+
+.forget-box 
+{
+    
+	color: #ebebeb;
+	font: 20px Arial, Helvetica, sans-serif;
+	
+}
+
+.login-box img {
+	border:none;
+}
+
+.login-box h2 {
+	padding:0;
+	margin:0;
+	color: #ebebeb;
+	font: bold 44px "Calibri", Arial;
+}
+
+
+.login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+	margin:0 0 7px 0;
+}
+
+.login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+
+
+.form-login  {
+	width: 205px;
+	padding: 6px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:#1e4f8a;
+	font-size: 16px;
+	color: #ebebeb;
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:87px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}
+
+
+
+.files-box 
+{
+    
+	width:240px;
+	padding: 30px 76px 50px 70px;
+	color: #000000;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/bgroundeditmodule.png) no-repeat left top;
+    margin-left: 106px;
+}
+.none
+{   padding-left:50px;
+    background-color:White;}
+
+.low
+{    padding-left:50px;
+    background-color:#C2DFFF;}
+
+.normal
+{    padding-left:50px;
+    background-color:#FFF494;}
+
+.high
+{    padding-left:50px;
+    background-color:#FFCD85;}
+
+.urgent
+{    padding-left:50px;
+    background-color:#FCBDBD;}
+
+.immediate
+{    padding-left:35px;
+    background-color:#C9CCC4;}

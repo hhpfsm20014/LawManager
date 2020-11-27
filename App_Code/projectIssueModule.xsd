@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projectIssueModule" targetNamespace="http://tempuri.org/projectIssueModule.xsd" xmlns:mstns="http://tempuri.org/projectIssueModule.xsd" xmlns="http://tempuri.org/projectIssueModule.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="projectIssueModuleTableAdapter" GeneratorDataComponentClassName="projectIssueModuleTableAdapter" Name="projectIssueModule" UserDataComponentName="projectIssueModuleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString2 (Web.config)" DbObjectName="dbo.projectIssueModule" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT project_name, issue_name, module_name FROM dbo.projectIssueModule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="project_name" DataSetColumn="project_name" />
+              <Mapping SourceColumn="issue_name" DataSetColumn="issue_name" />
+              <Mapping SourceColumn="module_name" DataSetColumn="module_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projectIssueModule" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="projectIssueModule" msprop:Generator_DataSetName="projectIssueModule">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="projectIssueModule" msprop:Generator_TableClassName="projectIssueModuleDataTable" msprop:Generator_TableVarName="tableprojectIssueModule" msprop:Generator_TablePropName="_projectIssueModule" msprop:Generator_RowDeletingName="projectIssueModuleRowDeleting" msprop:Generator_RowChangingName="projectIssueModuleRowChanging" msprop:Generator_RowEvHandlerName="projectIssueModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="projectIssueModuleRowDeleted" msprop:Generator_UserTableName="projectIssueModule" msprop:Generator_RowChangedName="projectIssueModuleRowChanged" msprop:Generator_RowEvArgName="projectIssueModuleRowChangeEvent" msprop:Generator_RowClassName="projectIssueModuleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_name" msprop:Generator_ColumnVarNameInTable="columnproject_name" msprop:Generator_ColumnPropNameInRow="project_name" msprop:Generator_ColumnPropNameInTable="project_nameColumn" msprop:Generator_UserColumnName="project_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="issue_name" msprop:Generator_ColumnVarNameInTable="columnissue_name" msprop:Generator_ColumnPropNameInRow="issue_name" msprop:Generator_ColumnPropNameInTable="issue_nameColumn" msprop:Generator_UserColumnName="issue_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="module_name" msprop:Generator_ColumnVarNameInTable="columnmodule_name" msprop:Generator_ColumnPropNameInRow="module_name" msprop:Generator_ColumnPropNameInTable="module_nameColumn" msprop:Generator_UserColumnName="module_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

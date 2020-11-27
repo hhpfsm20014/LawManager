@@ -1,0 +1,268 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Web site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Web site" />
+    <meta name="description" content="Site description here" />
+    <meta name="keywords" content="keywords here" />
+    <meta name="language" content="en" />
+    <meta name="subject" content="Site subject here" />
+    <meta name="robots" content="All" />
+    <meta name="copyright" content="Your company" />
+    <meta name="abstract" content="Site description here" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />
+    <script type="text/javascript" language="javascript" src="js/addon.js"></script>
+    <script type="text/javascript" language="javascript" src="js/custom.js"></script>
+    <style type="text/css">
+        .style1
+        {
+            width: 759px;
+        }
+        .style2
+        {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- top wrapper -->
+    <div id="topWrapper">
+        <div id="topBanner">
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td class="style1">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Gray" NavigateUrl="~/login.aspx">Sign In</asp:HyperLink>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Gray">Trail</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="topnav">
+        <ul>
+            <li id="current" style="border: none"><a href="#" shape="rect">Home</a> </li>
+            <li><a href="#" shape="rect">Features</a> </li>
+            <li><a href="#" shape="rect">Plans</a> </li>
+            <li><a href="#" shape="rect">Trial</a> </li>
+            <li><a href="#" shape="rect">Contact us</a> </li>
+            <li><a href="#" shape="rect">About us</a> </li>
+        </ul>
+    </div>
+    <!-- end top wrapper -->
+    <div id="wrapper">
+        <div id="container">
+            <div id="banner" class="slideshowContainer">
+                <!-- put your slideshow images here -->
+                <div class="slideshow">
+                    <%--<a href="http://www.flickr.com/photos/12836528@N00/1161507336" title="Facade" target="_blank" shape="rect"> 
+              <img src="http://lh6.ggpht.com/_d6vKxl1jKWk/S9XzN29FXdI/AAAAAAABDAg/3lYLjJQdX8E/facade.jpg" /> 
+            </a>  
+            <a href="http://www.flickr.com/photos/28481088@N00/2495495981" title="Twisted building" target="_blank" shape="rect"> 
+              <img src="http://lh6.ggpht.com/_d6vKxl1jKWk/S9XzOZurSSI/AAAAAAABDAk/9RRnvdbw8d0/twisted.jpg" /> 
+            </a>  
+            <a href="http://www.flickr.com/photos/51035555243@N01/43213643" title="Working late" target="_blank" shape="rect"> 
+              <img src="http://lh4.ggpht.com/_d6vKxl1jKWk/S9X8hUDF9qI/AAAAAAABDBI/nUypLbC1y8w/workinglate.jpg" /> 
+            </a> --%>
+                </div>
+                <div class="slideshowLeftCorner">
+                </div>
+                <div class="slideshowRightCorner">
+                </div>
+                <div class="slideshowBottom">
+                </div>
+            </div>
+            <!--  content -->
+            <div id="content">
+                <div style="margin-top: 20px;">
+                    <div class="one_fourth">
+                        <div class="bloc rounded">
+                            <h3>
+                                Project Management</h3>
+                            <p class="style2">
+                                <img src="images/chart_bar.png" style="float: right; margin: 0 0 0 8px" />
+                                REXPMS is a perfect Project Management solution. Keep a track of your projects in
+                                its clean interface.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one_fourth">
+                        <div class="bloc rounded">
+                            <h3>
+                                Issue Track</h3>
+                            <p>
+                                <img src="images/folder.png" style="float: right; margin: 0 0 0 8px" />
+                                Bugs, Features, Tickets, Tasks, Test Cases. Everything you'll ever need for issue
+                                tracking.</p>
+                        </div>
+                    </div>
+                    <div class="one_fourth">
+                        <div class="bloc rounded">
+                            <h3>
+                                File Sharing</h3>
+                            <p>
+                                <img src="images/link.png" style="float: right; margin: 0 0 0 8px" />
+                                File sharing is the practice of distributing or providing access to digitally stored
+                                information.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one_fourth last">
+                        <div class="bloc rounded">
+                            <h3>
+                                Team Chat</h3>
+                            <p>
+                                <img src="images/rss2.png" style="float: right; margin: 0 0 0 8px" />
+                                Create real-time conversations with your colleagues, label and find them in one
+                                click.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div>
+                        <h1>
+                            What’s Issue Tracking all about?</h1>
+                        <p>
+                            Issue Tracking(also known as bug tracking, defect tracking, problem tracking and
+                            ticket management) is an approach of keeping and tracking all your items in one
+                            single place(system). This approach allows you to save a lot of time if compared
+                            to text/excel file item reporting because you’re always able to find, edit, assign
+                            and comment everything extremely easy.
+                        </p>
+                    </div>
+                    <div class="half">
+                        <h3>
+                            <strong>REXPMS</strong></h3>
+                        <p>
+                            <strong>REXPMS</strong> is a user-friendly issue tracking and project management
+                            system.</p>
+                    </div>
+                    <div class="half last">
+                        <h3>
+                            Need Of Having <strong>REXPMS</strong></h3>
+                        <p>
+                            It provides the easiest way to <strong>manage projects, track bugs, add tasks</strong>
+                            and <strong>store documentation</strong>.</p>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <!-- end content -->
+            <div class="clear" style="height: 40px">
+            </div>
+        </div>
+        <!-- end container -->
+    </div>
+    <div id="bottomWrapper">
+        <div id="footer">
+            <div class="footer-one-third">
+                <h2>
+                    Company</h2>
+                <ul>
+                    <li><a href="#" shape="rect">Who are we</a> </li>
+                    <li><a href="#" shape="rect">What we do</a> </li>
+                    <li><a href="#" shape="rect">Contact</a> </li>
+                    <li><a href="#" shape="rect">Links</a> </li>
+                </ul>
+            </div>
+            <div class="footer-one-third">
+                <h2>
+                    Services</h2>
+                <ul>
+                    <li><a href="#" shape="rect">Project Management</a> </li>
+                    <li><a href="#" shape="rect">Issue Tracking</a> </li>
+                    <li><a href="#" shape="rect">Notifications</a> </li>
+                    <li><a href="#" shape="rect">File Sharing</a> </li>
+                </ul>
+            </div>
+            <div class="footer-one-third footer-last">
+                <h2>
+                    &nbsp;</h2>
+                <ul>
+                    <li><a href="#" shape="rect">Lorem ipsum</a> </li>
+                    <li><a href="#" shape="rect">Dolor sit</a> </li>
+                    <li><a href="#" shape="rect">Turpis egestas</a> </li>
+                    <li><a href="#" shape="rect">Commodo</a> </li>
+                    <li><a href="#" shape="rect">Eget non</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-links">
+            <div style="padding-top: 20px">
+                <!-- 
+DO NOT REMOVE OR MODIFY THE FOOTER LINK BELOW.
+If you want to remove this link please make a 10 dollars donation at www.dotemplate.com
+-->
+                created by Rajan Patil</div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

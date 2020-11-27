@@ -1,0 +1,65 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+
+public partial class editproject : System.Web.UI.Page
+{
+
+    
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {   
+        DBActivity db = new DBActivity();
+   
+
+        string projectName = DDL1.SelectedValue;
+        bool regi = db.EditProject(projectName, txtProjectDesc.Text, txtStartDate.Text, txtEndDate.Text);
+        if (regi)
+        {
+            Response.Write("update sucess");
+        }
+        else
+        {
+            Response.Write("update fail");
+        }
+    }
+
+
+    protected void DDL1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //DBActivity db = new DBActivity();
+        //string projectName = DDL1.SelectedValue;
+        //bool regi = db.EditProject(projectName, txtProjectDesc.Text, txtStartDate.Text, txtEndDate.Text);
+        txtProjectID.Text = DDL1.SelectedValue;
+        ClsDBConnection cn = new ClsDBConnection();
+        SqlConnection conn = cn.OpenConnection();
+        
+
+        SqlCommand cmd = new SqlCommand("SELECT * FROM Project_Master WHERE project_id='" + DDL1.SelectedValue + "'",conn);
+        SqlDataReader dr = cmd.ExecuteReader();
+
+        if (dr.Read() == true)
+        {
+            txtProjectDesc.Text = dr.GetValue(4).ToString();
+            txtStartDate.Text = dr.GetValue(5).ToString();
+            txtEndDate.Text = dr.GetValue(6).ToString();
+        }
+        dr.Close();
+        conn.Close();
+    }
+}

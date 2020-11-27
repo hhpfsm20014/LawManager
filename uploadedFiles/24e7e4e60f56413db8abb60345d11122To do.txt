@@ -1,0 +1,9 @@
+Web:
+-add 2 dry process pic in Laundry page
+-check what the PDF is about at design page
+-check the embroidary images & add company names/details
+-That’s It Fashions Ltd. could be Ha-Meem Design Ltd.
+
+Law Management Software:
+-fix the left menu issues
+

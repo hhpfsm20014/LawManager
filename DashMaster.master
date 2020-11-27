@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DashMaster.master.cs" Inherits="DashMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Law Management Software | Ha-Meem Group</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />
+    <script type="text/javascript" language="javascript" src="js/addon.js"></script>
+    <script type="text/javascript" language="javascript" src="js/custom.js"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <style type="text/css">
+        .style3 {
+            height: 25px;
+            text-align: right;
+            width: 1000px;
+            color: Gray;
+        }
+
+        .style6 {
+            width: 123px;
+            height: 30px;
+            background-image: url(images/menubtnfinal2.png);
+            vertical-align: text-top;
+            text-align: center;
+        }
+
+        .style7 {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+        <!-- top wrapper -->
+        <div id="topWrapper">
+            <div id="topBanner">
+
+                <img src="images/logo.png" alt="logo" style="float: left; margin-top: 30px;" />
+                <h1><span style="color: #aaaaaa; float: left;">Law Management Software</span></h1>
+
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="style3" style="color: #fff;">Welcome&nbsp<asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                            &nbsp&nbsp
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style3" style="height: 25px; color: #fff;">Select Case:
+                        <asp:DropDownList ID="ddlProject" runat="server" AppendDataBoundItems="True" DataSourceID="SqlDataSource1"
+                            DataTextField="project_name" DataValueField="project_id"
+                            AutoPostBack="True" OnSelectedIndexChanged="ddlProject_SelectedIndexChanged" Width="300px">
+                            <asp:ListItem Selected="false" Value="-1">All</asp:ListItem>
+                        </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>"
+                                SelectCommand="SELECT [project_id], [project_name] FROM [Project_Master]"></asp:SqlDataSource>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <%--<div id="topnav">
+            <ul>
+                <li><a href="dashboard.aspx">View Cases</a></li>                
+                <li><a href="MyAccount.aspx">My Account</a> </li>
+                <li><a href="Files.aspx">Files </a></li>
+                <li><a href="ReportsNew.aspx">Reports</a></li>
+                <li><a href="ReportsLandCase.aspx">Land Reports</a></li>               
+            </ul>
+        </div>--%>
+        <div id='cssmenu'>
+            <ul>
+                <li><a href='dashboard.aspx'><span>View Cases</span></a></li>
+                <li><a href='MyAccount.aspx'><span>My Account</span></a></li>
+                <li><a href='Files.aspx'><span>Files</span></a></li>                                
+                <li class='has-sub'><a href='#'><span>Reports</span></a>
+                    <ul>
+                        <li><a href='ReportsNew.aspx'><span>All Reports</span></a></li>
+                        <li><a href='Reports/rptAppelateDiv.aspx'><span>Appellate Division</span></a></li>
+                        <li><a href='Reports/rptHighDiv.aspx'><span>High Court Division</span></a></li>
+                        <li><a href='Reports/rptLabourLaw.aspx'><span>Labour Law Court</span></a></li>
+                        <li class='has-sub'><a href='#'><span>Lower Court</span></a>
+                            <ul>
+                                <li><a href='Reports/rptChiefJudMag.aspx'><span>Chief Judicial Magistrate</span></a></li>
+                                <li><a href='Reports/rptChiefMetMag.aspx'><span>Chief Metropolitan Magistrate</span></a></li>
+                                <li><a href='Reports/rptDistrictJudgeCourt.aspx'><span>District Judge Court</span></a></li>
+                                <li><a href='Reports/rptMetroPolSessionCourt.aspx'><span>Metropolitan Session Court</span></a></li>
+                                <li><a href='Reports/rptMetroMagistrate.aspx'><span>Metropolitan Magistrate</span></a></li>                                
+                                <li class='last'><a href='Reports/rpt1stJntDistJudge.aspx'><span>1st Joint District Judge</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class='last'><a href='ReportsLandCase.aspx'><span>Land Reports</span></a></li>                
+            </ul>
+        </div>
+
+        <!-- end top wrapper -->
+        <div id="wrapper">
+            <table style="padding-left: 20px">
+                <tr>
+                    <td style="vertical-align: top; padding-top: 10px;">
+                        <table id="leftpane" style="width: 121px; height: 234px;" align="left" runat="server">
+                            <tr>
+                                <td class="style6">
+                                    <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ManageUsers.aspx">Manage Accounts</asp:HyperLink>--%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style6">
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/viewprojects.aspx">Add/Edit Cases</asp:HyperLink>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style6">
+                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ManageIssues.aspx">Add Next Date</asp:HyperLink>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style6">
+                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/createUsers.aspx">Create Users</asp:HyperLink>
+                                </td>
+                            </tr>
+                            <%--<tr>
+                            <td class="style6">
+                                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Reports.aspx">Reports</asp:HyperLink>
+                            </td>
+                        </tr>--%>
+                            <tr>
+                                <td class="style6">
+                                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/ViewLandCase.aspx">Add/Edit Land Case</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>&nbsp;
+                                </td>
+                                <td class="style7">&nbsp;
+                                </td>
+                                <td>
+                                    <asp:Panel ID="Panel1" runat="server" Width="1000px">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </asp:Panel>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div style="bottom: 0px; padding-top: 20px; background-color: #111111;">
+            <p style="text-align: center; padding-bottom: 24px; color: #ffffff;">
+                &copy; Ha-Meem Group. All Rights Reserved.
+            </p>
+        </div>
+    </form>
+</body>
+</html>

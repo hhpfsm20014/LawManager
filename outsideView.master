@@ -1,0 +1,110 @@
+﻿    <%@ Master Language="C#" AutoEventWireup="true" CodeFile="outsideView.master.cs"
+    Inherits="outsideView" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Law Management Software | Sign in</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Web site" />
+    <meta name="description" content="Site description here" />
+    <meta name="keywords" content="keywords here" />
+    <meta name="language" content="en" />
+    <meta name="subject" content="Site subject here" />
+    <meta name="robots" content="All" />
+    <meta name="copyright" content="Your company" />
+    <meta name="abstract" content="Site description here" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />
+    <script type="text/javascript" language="javascript" src="js/addon.js"></script>
+    <script type="text/javascript" language="javascript" src="js/custom.js"></script>
+    <style type="text/css">
+        .style3 
+        {
+            height: 48px;
+            text-align: right;
+            width: 914px;
+            word-spacing: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <!-- top wrapper -->
+    <div id="topWrapper">
+        <div id="topBanner">
+            <img src="images/logo.png" alt="logo" style="float: left; margin-top: 30px;" />
+            <h1><span style="color: #aaaaaa; float: left;">Law Management Software</span></h1>
+            <table style="width: 100%;">
+                <tr>
+                    <td class="style3">
+                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Gray" NavigateUrl="~/login.aspx">SignIn</asp:HyperLink>
+                        <%--<asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Gray">Trial</asp:HyperLink>--%>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <%--<div id="topnav">
+        <ul>
+            <li id="current" style="border: none"><a href="index.aspx" shape="rect">Home</a>
+            </li>
+            <li><a href="features.aspx" shape="rect">Features</a> </li>
+            <li><a href="underConstruction.aspx" shape="rect">Plans</a> </li>
+            <li><a href="registration.aspx" shape="rect">Trial</a> </li>
+            <li><a href="contact_us.aspx" shape="rect">Contact us</a> </li>
+            <li><a href="#" shape="rect">About us</a> </li>
+        </ul>
+    </div>--%>
+    <!-- end top wrapper -->
+    <div id="wrapper">
+        <div id="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- end container -->
+    </div>
+    <div id="bottomWrapper">
+        <%--<div id="footer">
+            <div class="footer-one-third">
+                <h2>
+                    Company</h2>
+                <ul>
+                    <li><a href="#" shape="rect">Who are we</a> </li>
+                    <li><a href="#" shape="rect">What we do</a> </li>
+                    <li><a href="#" shape="rect">Contact</a> </li>
+                    <li><a href="#" shape="rect">Links</a> </li>
+                </ul>
+            </div>
+            <div class="footer-one-third">
+                <h2>
+                    Services</h2>
+                <ul>
+                    <li><a href="#" shape="rect">Project Management</a> </li>
+                    <li><a href="#" shape="rect">Issue Tracking</a> </li>
+                    <li><a href="#" shape="rect">Notifications</a> </li>
+                    <li><a href="#" shape="rect">File Sharing</a> </li>
+                </ul>
+            </div>
+            <div class="footer-one-third footer-last">
+                <h2>
+                    Contact Us</h2>
+                <ul>
+                    <li> </li>
+                    <li>sajid@hameemgroup.com</li>
+                    <li>&nbsp;Skype: sajid.ict</li>
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </div>
+        </div>--%>
+        
+    </div>
+        <div style="bottom: 0px; padding-top: 20px; background-color: #aaaaaa;">
+            <p style="text-align: center; padding-bottom: 24px">
+                &copy; Ha-Meem Group. All Rights Reserved.
+            </p>
+        </div>
+    </form>
+</body>
+</html>
